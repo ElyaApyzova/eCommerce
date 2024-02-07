@@ -1,4 +1,4 @@
-import callApi from '../api/index'
+import callApi from '../api'
 
 export const INCREASE_QUANTITY = 'INCREASE_QUANTITY';
 export const DECREASE_QUANTITY = 'DECREASE_QUANTITY';
