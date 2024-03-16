@@ -1,11 +1,29 @@
 import React from "react";
-import Header from "./components/Header";
+import "./App.css";
+import "./css/style.css";
+import { BrowserRouter as Router, Routes,  Route } from "react-router-dom";
+import Home from "./pages/HomePage/Home";
+import Shop from "./pages/ShopPage/Shop";
+import Cart from "./pages/CartPage/Cart";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import Header from "./common/Header";
 
 
 
 function App() {
     return (
-        <Header />
+        <div>
+            <Router>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/shop" element={<Shop />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/*" element={<NotFoundPage />} />
+                </Routes>
+                
+            </Router>
+        </div>
     )
 }
    
